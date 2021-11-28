@@ -1,0 +1,13 @@
+<h1>GeekKobe</h1>
+<h3>投稿一覧</h3>
+<%= link_to "新規投稿へ", new_student_path %>
+<div class="students-container">
+<% @students.each do |t| %>
+    <%= t.name %>
+    <%= t.profile %>
+    <%= t.mentor %>
+    <%= t.grade %>
+    <%= t.created_at %>
+    </div>
+  <% end %>
+</div>

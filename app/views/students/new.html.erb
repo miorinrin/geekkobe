@@ -1,0 +1,33 @@
+<h1>GeekKobe</h1>
+<h3>新規投稿</h3>
+<%= form_for @student do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :profile %>
+    <%= f.text_field :profile, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mentor %>
+    <%= f.text_field :profile, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :grade %>
+    <%= f.select :shop_name, 
+    [["１年", "1年"], 
+    ["2年", "2年"], 
+    ["3年", "3年"],
+    ["4年", "4年"],
+    ["院1年", "院1年"],
+    ["院2年", "院2年"],
+    ["院3年", "院3年"]], include_blank: "選択して下さい" %>
+  </div>
+  <%= f.submit "投稿する" %>
+<% end %>
+
+<%= link_to "一覧に戻る", students_path %>
